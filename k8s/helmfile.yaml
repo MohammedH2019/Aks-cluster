@@ -1,0 +1,9 @@
+releases:
+  - name: azure-vote-front
+    chart: ./helm-charts/azure-vote-front/
+    namespace: test
+    values:
+      - values-front-test.yaml
+
+
+

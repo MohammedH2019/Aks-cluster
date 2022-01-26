@@ -4,5 +4,3 @@ variable "ssh_public_key" {
 variable log_analytics_workspace_sku {
     default = "PerGB2018"
 }
-variable "client_id" {}
-variable "client_secret" {}
