@@ -1,0 +1,9 @@
+image:
+  repository: mocontainers2022.azurecr.io/azure-vote-front
+  tag: v1
+
+service:
+  type: LoadBalancer
+  port: 80
+
+

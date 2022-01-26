@@ -11,8 +11,8 @@ resource "azurerm_kubernetes_cluster" "mo_eks" {
     }
 
     service_principal {
-        client_id     = "711ebf59-54c1-4d6d-aedf-dfe186abc1f5"
-        client_secret = "sXHgDVfR2mrGV3XTiM.sg4EM-KbGHjH-N3"
+        client_id     = data.sops_file.secrets.data.client_id
+        client_secret = data.sops_file.secrets.data.client_secrets
     }
 
     addon_profile {
