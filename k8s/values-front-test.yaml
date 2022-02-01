@@ -2,8 +2,12 @@ image:
   repository: mocontainers2022.azurecr.io/azure-vote-front
   tag: v1
 
-service:
-  type: LoadBalancer
-  port: 80
-
-
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  hosts:
+    - host: azure-front.local
+      paths:
+        - path: /
+          pathType: Prefix
